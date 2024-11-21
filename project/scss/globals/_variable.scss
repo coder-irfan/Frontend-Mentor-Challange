@@ -1,0 +1,12 @@
+// Colors
+$LightPurple: hsl(254, 88%, 90%);
+$DarkPurple: hsl(256, 67%, 59%);
+$LightYellow: hsl(31, 66%, 93%);
+$DarkYellow: hsl(39, 100%, 71%);
+$White: hsl(0, 0%, 100%);
+$Black: hsl(0, 0%, 7%);
+
+// Font Size
+$FontSize: 1.125rem; // 18px
+
+@forward 'variables';

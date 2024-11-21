@@ -1,0 +1,19 @@
+.footer {
+    padding: 1rem;
+    background-color: #333;
+    color: $White;
+    text-align: center;
+    line-height: 1.1;
+    margin: 0 1rem;
+
+    & a {
+        color: $White;
+        text-decoration: none;
+        transition: .4s;
+
+        &:hover {
+            color: $DarkYellow;
+            text-decoration: underline;
+        }
+    }
+}

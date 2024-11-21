@@ -1,0 +1,271 @@
+@use 'mixins';
+
+// Colors
+$LightPurple: hsl(254, 88%, 90%);
+$DarkPurple: hsl(256, 67%, 59%);
+$LightYellow: hsl(31, 66%, 93%);
+$DarkYellow: hsl(39, 100%, 71%);
+$White: hsl(0, 0%, 100%);
+$Black: hsl(0, 0%, 7%);
+
+// Font Size
+$FontSize: 1.125rem; // 18px
+
+
+.bento-grid {
+    max-width: 87.5rem;
+    margin: 1rem;
+    display: grid;
+    grid-auto-rows: 4.6875rem;
+    grid-auto-columns: 1fr;
+    gap: 2rem;
+    grid-template-areas:
+    'box1 box2 box2 box3'
+    'box1 box2 box2 box3'
+    'box1 box2 box2 box3'
+    'box1 box2 box2 box3'
+    'box1 box5 box6 box3'
+    'box4 box5 box6 box3'
+    'box4 box5 box6 box3'
+    'box4 box7 box8 box8'
+    'box4 box7 box8 box8'
+    'box4 box7 box8 box8';
+
+    @include breakpoint(medium) {
+        grid-auto-rows: initial;
+        grid-template-areas: 
+        'box1 box1 box2 box2'
+        'box1 box1 box2 box2'
+        'box3 box3 box4 box4'
+        'box3 box3 box4 box4'
+        'box5 box5 box6 box6'
+        'box5 box5 box6 box6'
+        'box7 box7 box8 box8'
+        'box7 box7 box8 box8';
+    }
+
+    @include breakpoint(small) {
+        grid-auto-rows: initial;
+        grid-template-areas: 
+        'box2'
+        'box5'
+        'box6'
+        'box3'
+        'box8'
+        'box7'
+        'box1'
+        'box4';
+    }
+}
+
+.item {
+
+    &__lgtext {
+        font-size: 2.75rem;
+        font-weight: 500;
+
+        @include breakpoint(small) {
+            :nth-child(1) {
+                font-size: 2.5rem;
+            }
+        }
+
+        @include breakpoint(small) {
+            :nth-child(3) {
+                font-size: 2.25rem;
+            }
+        }
+    }
+
+    &__xlgtext {
+        font-size: 4rem;
+        font-weight: 500;
+    }
+
+    &__medtext {
+        font-size: 2.35rem;
+        font-weight: 500;
+    }
+
+    &__smtext {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    & .xlg-text {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+}
+
+.bento-grid .item {
+    border-radius: .5rem;
+    overflow: hidden;
+
+    &:nth-child(1) {
+        background-color: $LightYellow;
+        grid-area: box1;
+        padding: 6rem 2rem 0 2.5rem;
+
+        @include breakpoint(small) {
+            padding: 2rem;
+            text-align: left;
+        }
+
+        & em {
+            color: $DarkPurple;
+        }
+
+        & img {
+            margin-top: 1rem;
+
+            @include breakpoint(small) {
+                width: 15.625rem;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        background-color: $DarkPurple;
+        color: $White;
+        grid-area: box2;
+        padding: 2rem;
+        text-align: center;
+        font-weight: 500;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        & img {
+            width: 15.625rem;
+            margin: 1rem 0 .5rem;      
+        }
+    }
+
+    &:nth-child(3) {
+        background-color: $LightPurple;
+        grid-area: box3;
+        padding: 2.75rem 2rem 2.5rem;
+        text-align: left;
+        position: relative;
+
+        & h2 {
+            margin-top: -1rem;
+            font-weight: 600;
+        }
+
+        & p {
+            margin-top: 30rem;
+            font-weight: 500;
+        }
+
+        @include breakpoint(small) {
+            padding: 2.75rem 1rem 2.5rem;
+        }
+
+        & img {
+            position: absolute;
+            height: 24.625rem;
+            object-fit: cover;
+            object-position: left;
+            top: 6rem;
+        }
+
+        & p {
+            text-align: center;
+        }
+    }
+
+    &:nth-child(4) {
+        background-color: $DarkYellow;
+        grid-area: box4;
+        padding: 1.75rem 2.25rem;
+
+        @include breakpoint(small) {
+            text-align: left;
+        }
+
+        & p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &:nth-child(5) {
+        background-color: $White;
+        grid-area: box5;
+        padding: 1rem 2rem;
+        position: relative;
+        
+        @include breakpoint(small) {
+            text-align: left;
+        }
+
+        & p {
+            margin-top: 6rem;
+
+            @include breakpoint(small) {
+                margin-top: 10rem;
+            }
+        }
+
+        & img {
+            position: absolute;
+        }
+    }
+
+    &:nth-child(6) {
+        background-color: $DarkYellow;
+        grid-area: box6;
+        position: relative;
+        padding: 1rem 1.75rem;
+
+        @include breakpoint(small) {
+            text-align: left;
+        }
+
+        & p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &:nth-child(7) {
+        background-color: $White;
+        grid-area: box7;
+        padding: 2rem;
+
+        @include breakpoint(small) {
+            text-align: left;
+        }
+
+        & span {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        & img {
+            margin-top: 2rem;
+        }
+    }
+
+    &:nth-child(8) {
+        background-color: $DarkPurple;
+        color: $White;
+        grid-area: box8;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1.75fr 2fr;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+
+        @include breakpoint(small) {
+            padding: 1.5rem 4rem;
+        }
+        
+        @include breakpoint(medium) {
+            grid-template-columns: 1fr;
+        } 
+    }
+}
+
