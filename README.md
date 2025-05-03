@@ -1,4 +1,4 @@
-🔗 [[GitHub Repository](https://github.com/Mohammad-Irfan-Noorzada/Frontend-Mentor-Challange/tree/main](https://mohammad-irfan-noorzada.github.io/Frontend-Mentor-Challange/))]
+🔗 [[GitHub Repository](https://mohammad-irfan-noorzada.github.io/Frontend-Mentor-Challange/)]
 
 🧰 Technologies Used
 HTML5
