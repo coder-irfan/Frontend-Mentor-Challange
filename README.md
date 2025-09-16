@@ -1,4 +1,4 @@
-🔗 [[GitHub Repository](https://mohammad-irfan-noorzada.github.io/Frontend-Mentor-Challange/)]
+🔗 [[GitHub Repository](https://coder-irfan.github.io/Frontend-Mentor-Challange/)]
 
 🧰 Technologies Used
 HTML5
